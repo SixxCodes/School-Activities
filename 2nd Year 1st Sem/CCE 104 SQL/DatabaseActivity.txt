@@ -1,0 +1,71 @@
+/*CREATE DATABASE dbSchool;*/
+
+CREATE TABLE tblStudentClasses(
+
+	classID INT,
+    studentID INT NOT NULL,
+
+    FOREIGN KEY (studentID)
+    REFERENCES tblStudent(studentID)
+
+);
+
+CREATE TABLE tblStudent(
+
+	studentID INT PRIMARY KEY NOT NULL,
+    first_name VARCHAR (20) NOT NULL,
+    last_name VARCHAR (40) NOT NULL,
+    year_group INT NOT NULL,
+    date_of_birth DATE NOT NULL,
+    student_image BLOB,
+    school_team VARCHAR	(15) 
+
+);	
+
+CREATE TABLE tblclass(
+
+	classID INT,
+    classroomID INT,
+    FOREIGN KEY (classroomID) 
+    REFERENCES tblclassroom(classroomID),
+
+    subjectID INT,
+    FOREIGN KEY (subjectID)
+    REFERENCES tblsubject(subjectID),
+
+    teacherID INT NOT NULL,
+    FOREIGN KEY (teacherID)
+    REFERENCES tblteacher(teacherID),
+
+    period INT,
+    classTime TIME
+
+);
+
+CREATE TABLE tblsubject(
+
+	subjectID INT PRIMARY KEY,
+    requirements VARCHAR (50),
+    max_capacity INT
+
+);
+
+CREATE TABLE tblclassroom(
+
+	classroomID INT PRIMARY KEY,
+    capacity INT,
+    roomType VARCHAR (20),
+    facilities VARCHAR (100)
+
+);
+
+CREATE TABLE tblteacher(
+
+	teacherID INT PRIMARY KEY NOT NULL,
+    first_name VARCHAR (20) NOT NULL,
+    last_name VARCHAR (40) NOT NULL,
+    title VARCHAR (40) ,
+    subjectsTaught VARCHAR (100),
+    classLevel VARCHAR (100)
+
+);

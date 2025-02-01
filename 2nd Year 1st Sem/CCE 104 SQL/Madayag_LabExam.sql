@@ -1,0 +1,69 @@
+CREATE TABLE regions(
+	region_ID INT PRIMARY KEY,
+	region_name VARCHAR(25),
+);
+
+CREATE TABLE countries(	
+	country_ID CHAR(2) PRIMARY KEY,
+	country_name VARCHAR(40),
+	region_ID INT,
+	FOREIGN KEY(region_ID) REFERENCES regions(region_ID)
+);
+
+CREATE TABLE locations(
+	LOCATION_ID INT PRIMARY KEY,
+	STREET_ADDRESS VARCHAR(25),
+	POSTAL_CODE VARCHAR(12),
+	CITY VARCHAR(30),
+	STATE_PROVINCE VARCHAR(12),
+	COUNTRY_ID CHAR(2),
+	FOREIGN KEY (COUNTRY_ID) REFERENCES countries(country_ID)
+);
+
+CREATE TABLE departments(
+	department_ID INT PRIMARY KEY,
+	department_name VARCHAR(30),
+	manager_ID INT,
+	location_ID INT,
+	FOREIGN KEY (location_ID) REFERENCES locations(LOCATION_ID)
+);
+
+CREATE TABLE job_history(
+	employee_ID INT PRIMARY KEY,	
+	start_date DATE,
+	end_date DATE,
+	job_ID VARCHAR(10),
+	department_ID INT,
+	FOREIGN KEY (department_ID) REFERENCES departments(department_ID),
+	FOREIGN KEY (job_ID) REFERENCES jobs(JOB_ID)
+);
+
+CREATE TABLE jobs(
+	JOB_ID VARCHAR(10) PRIMARY KEY,
+	JOB_TITLE VARCHAR(35),
+	MIN_SALARY INT,
+	MAX_SALARY INT
+);
+
+CREATE TABLE employees(
+	employee_ID INT PRIMARY KEY,
+	first_name VARCHAR(20),
+	last_name VARCHAR(25),
+	email VARCHAR(25),
+	phone_number VARCHAR(20),
+	hire_date DATE,
+	JOB_ID VARCHAR(10),
+	salary INT,
+	COMMISSION_PCT INT,
+	MANAGER_ID INT,
+	DEPARTMENT_ID INT,
+	FOREIGN KEY (DEPARTMENT_ID) REFERENCES departments(department_ID),
+	FOREIGN KEY (employee_ID) REFERENCES job_history(employee_ID),
+	FOREIGN KEY (JOB_ID) REFERENCES jobs(JOB_ID)
+);
+
+CREATE TABLE job_grade(
+	GRADE_LEVEL VARCHAR(2) PRIMARY KEY,
+	LOWEST_SAL INT,
+	HIGHEST_SAL INT
+);
