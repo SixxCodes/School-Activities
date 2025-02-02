@@ -1,5 +1,7 @@
 # Bachelor of Science in Information Technology (School Activities)
 
+Started: 2023
+
 ## Language:
 * 1st Year 1st Semester: Java
 * 1st Year 2nd Semester: Java
