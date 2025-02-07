@@ -1,4 +1,4 @@
-# 🌱 Bachelor of Science in Information Technology (School Activities) 🌱
+# 🌱 Bachelor of Science in Information Technology (BSIT School Activities) 🌱
 
 Started: 2023
 
