@@ -2,7 +2,7 @@
 
 Started: 2023
 
-## Language:
+## 🌱 Language:
 * 1st Year 1st Semester: Java
 * 1st Year 2nd Semester: Java
 * 2nd Year 1st Semester: SQL, Java, Python
