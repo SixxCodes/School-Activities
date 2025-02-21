@@ -1,0 +1,17 @@
+body {
+    background-color: #f0f0f0;
+    font-family: "Times New Roman", serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.intro {
+    font-size: 18px;
+    margin: auto;
+    text-align: center;
+}

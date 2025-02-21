@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIS IS A FINE DINING RESTORANTH</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        #countdown {
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        let timeLeft = 10;
+        function countdown() {
+            if (timeLeft <= 0) {
+                document.getElementById("message").innerHTML = "💥 Brain Exploded 💥";
+                document.getElementById("countdown").innerHTML = "💀";
+            } else {
+                document.getElementById("countdown").innerHTML = timeLeft;
+                timeLeft--;
+                setTimeout(countdown, 1000);
+            }
+        }
+        window.onload = countdown;
+    </script>
+</head>
+<body>
+    <h2>⚠️ ERROR: WTF FOOD COMBINATION DETECTED ⚠️</h2>
+    <p>Kinilaw na Koko Crunch detected. Initiating self-destruct sequence.</p>
+    <p>Time remaining:</p>
+    <p id="countdown">10</p>
+    <p id="message"></p>
+</body>
+</html>
