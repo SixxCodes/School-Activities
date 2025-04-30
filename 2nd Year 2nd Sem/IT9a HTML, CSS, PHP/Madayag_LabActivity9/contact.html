@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Personal Website - Contact</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/contact_styles.css"/>
+        <link rel="icon" href="my_images/ico.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="header-left">
+                <img class="logo" src="my_images/ico.png" alt="Logo" />
+                <h2>My Portfolio</h2>
+            </div>
+        
+            <button class="hamburger" id="hamburger">&#9776;</button>
+        
+            <!-- Desktop Nav -->
+            <nav class="link-container desktop-nav" id="desktop-nav">
+                <a class="link active" href="index.html">Home</a>
+                <a style="text-decoration: underline;
+                background-color: var(--main-color);
+                color: white;
+                font-size: 24px;
+                border-radius: 10px;" class="link" href="contact.html">Contact</a>
+                <button id="hire-me">Hire Me</button>
+            </nav>
+        </header>
+        
+        <!-- Mobile Sidebar Nav -->
+        <div class="sidebar" id="sidebar">
+            <button class="close-sidebar" id="close-sidebar">&times;</button> 
+            <nav class="link-container mobile-nav">
+                <a class="link active" href="index.html">Home</a>
+                <a style="text-decoration: underline;
+                background-color: var(--main-color);
+                color: white;
+                font-size: 24px;
+                border-radius: 10px;" class="link" href="contact.html">Contact</a>
+                <button id="hire-me">Hire Me</button>
+            </nav>
+        </div>
+        
+        <div id="overlay"></div>
+
+        <article class="contact-section">
+            <div class="container">
+              <h3 class="contact-title">contact me!</h3>
+              <div class="social-links">
+                <a href="https://www.facebook.com/kenneth.crisostomo.45654/" target="_blank" class="social-icon fb">
+                  <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://github.com" target="_blank" class="social-icon github">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://x.com" target="_blank" class="social-icon x">
+                  <i class="fab fa-x-twitter"></i> X (Twitter)
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon ig">
+                  <i class="fab fa-instagram"></i> Instagram
+                </a>
+              </div>
+            </div>
+        </article>
+          
+        <script>
+            const hamburger = document.getElementById("hamburger");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("overlay");
+            const closeSidebar = document.getElementById("close-sidebar");
+        
+            hamburger.addEventListener("click", () => {
+                sidebar.classList.add("show");
+                overlay.classList.add("show");
+            });
+        
+            overlay.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                overlay.classList.remove("show");
+            });
+        
+            closeSidebar.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                overlay.classList.remove("show");
+            });
+        </script>
+    </body>
+</html>

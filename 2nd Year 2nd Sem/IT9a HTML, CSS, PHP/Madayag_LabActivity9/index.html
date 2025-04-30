@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kenny - Personal Website</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/home_styles.css"/>
+        <link rel="icon" href="my_images/ico.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <header>
+            <div class="header-left">
+                <img class="logo" src="my_images/ico.png" alt="Logo" />
+                <h2>My Portfolio</h2>
+            </div>
+        
+            <button class="hamburger" id="hamburger">&#9776;</button>
+        
+            <!-- Desktop Nav -->
+            <nav class="link-container desktop-nav" id="desktop-nav">
+                <a style="text-decoration: underline;
+                background-color: var(--main-color);
+                color: white;
+                font-size: 24px;
+                border-radius: 10px;" class="link active" href="index.html">Home</a>
+                <a class="link" href="contact.html">Contact</a>
+                <button id="hire-me">Hire Me</button>
+            </nav>
+        </header>
+        
+        <!-- Mobile Sidebar Nav -->
+        <div class="sidebar" id="sidebar">
+            <button class="close-sidebar" id="close-sidebar">&times;</button> <!-- This is the new button -->
+            <nav class="link-container mobile-nav">
+                <a style="text-decoration: underline;
+                background-color: var(--main-color);
+                color: white;
+                font-size: 24px;
+                border-radius: 10px;" class="link active" href="index.html">Home</a>
+                <a class="link" href="contact.html">Contact</a>
+                <button id="hire-me">Hire Me</button>
+            </nav>
+        </div>
+        
+        <div id="overlay"></div>
+
+        <div class="hero-container">
+            <img class="ken-img" src="my_images/ken.jpg" alt="My Picture"/>
+            <h1 class="main-content">👋 Hi, I'm Kenny C. Madayag!</h1>
+            <hr/>
+            <p class="main-content intro">I'm a 2nd-year BSIT student with a passion for coding and problem-solving.<br/>At 24 years old, I'm constantly learning and exploring new technologies to sharpen my skills in programming and software development.<br/>My dream? To become a Full-Stack developer!</p>
+            <p class="main-content quote">-"A bug fixed without struggle is just luck, not growth."-</p>
+        </div>        
+
+        <script>
+            const hamburger = document.getElementById("hamburger");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("overlay");
+            const closeSidebar = document.getElementById("close-sidebar");
+        
+            hamburger.addEventListener("click", () => {
+                sidebar.classList.add("show");
+                overlay.classList.add("show");
+            });
+        
+            overlay.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                overlay.classList.remove("show");
+            });
+        
+            closeSidebar.addEventListener("click", () => {
+                sidebar.classList.remove("show");
+                overlay.classList.remove("show");
+            });
+        </script>
+        
+    </body>
+</html>

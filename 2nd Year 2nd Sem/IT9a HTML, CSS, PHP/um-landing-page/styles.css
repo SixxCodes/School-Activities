@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1257px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.text-content {
+  flex: 1;
+}
+
+h1 {
+  color: #b22222;
+  font-size: 5em;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.enroll-btn {
+  display: inline-block;
+  background-color: #ffd700;
+  color: #000;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.enroll-btn:hover {
+  background-color: rgb(177, 0, 0);
+  color: white;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 834px) {
+  .content {
+    max-width: 592px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    order: 2;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    margin: 0 auto 2rem;
+  }
+
+  .logo img {
+    max-width: 300px;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 376px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .content {
+    max-width: 292px;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+}

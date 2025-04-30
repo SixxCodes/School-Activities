@@ -1,0 +1,130 @@
+/*====================CONTAINER====================*/
+.hero-container {
+    background: var(--white);
+    background-attachment: fixed;
+    background-size: contain;
+    text-align: center;
+    margin: 100px auto 40px;
+    max-width: 80%;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 5px #ff7d7d2a, -5px -5px 20px 20px #ff7d7d2a;
+    border-radius: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*====================ANIMATION====================*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/*====================INSIDE CONTENT====================*/
+.ken-img {
+    margin-top: 20px;
+    border: 10px solid var(--main-color);
+    border-radius: 50px;
+    width: 250px;
+    height: auto;
+    max-width: 90%;
+}
+
+hr {
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.main-content {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.intro {
+    font-size: 1.2rem;
+    padding: 20px 50px;
+}
+
+.quote {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/*====================MEDIA QUERIES====================*/
+
+/* Mobile (≤600px) */
+@media (max-width: 600px) {
+    .hero-container {
+        margin: 100px 10px;
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .ken-img {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .intro,
+    .quote {
+        font-size: 1.2rem;
+        padding: 20px 15px;
+    }
+}
+
+/* Tablet (601px–1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero-container {
+        margin: 80px 30px;
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .ken-img {
+        width: 220px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .intro,
+    .quote {
+        font-size: 1.5rem;
+        padding: 25px 30px;
+    }
+}
+
+/* Desktop (>1024px) */
+@media (min-width: 1025px) {
+    .hero-container {
+        margin: 100px auto 40px;
+        max-width: 70%;
+    }
+
+    .ken-img {
+        width: 180px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .intro,
+    .quote {
+        font-size: 1.2rem;
+    }
+}
